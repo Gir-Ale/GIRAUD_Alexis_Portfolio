@@ -266,6 +266,34 @@
           </div>
         </article>
 
+        <!-- AI-CG -->
+        <article class="project-card reveal reveal-delay-2" id="card-aicg" data-project="aicg" role="button"
+          tabindex="0" aria-label="Open AI-CG project details">
+          <div class="project-img-wrap">
+            <img src="projets/AI-CG/3D1.png" alt="AI-CG 3D design" loading="lazy" />
+            <div class="project-img-overlay" aria-hidden="true"></div>
+            <div class="project-tags">
+              <span class="project-tag">AI</span>
+              <span class="project-tag">Graphics</span>
+            </div>
+          </div>
+          <div class="project-body">
+            <span class="project-num">05</span>
+            <h3 class="project-title">AI-CG Web Apps</h3>
+            <p class="project-desc">
+              A collection of three independent web applications exploring Artificial Intelligence and Computer
+              Graphics: a Digit Classifier, a Raymarch Scene Editor, and a Local LLM RAG interface.
+            </p>
+            <div class="project-footer">
+              <div class="project-tech">
+                <span>AI</span>
+                <span>3D Design</span>
+              </div>
+              <div class="project-arrow" aria-hidden="true">↗</div>
+            </div>
+          </div>
+        </article>
+
       </div><!-- /projects-grid -->
     </div>
   </section>
@@ -402,8 +430,7 @@
   <div class="modal-overlay" id="modal-guardian" role="dialog" aria-modal="true" aria-label="Guardian project details">
     <div class="modal">
       <div class="modal-media">
-        <img src="projets/guardian/1M2.png"
-          alt="Guardian surveillance robot dashboard" id="modal-guardian-main-img" />
+        <img src="projets/guardian/1M2.png" alt="Guardian surveillance robot dashboard" id="modal-guardian-main-img" />
         <button class="modal-close" id="modal-guardian-close" aria-label="Close Guardian modal">✕</button>
       </div>
       <div class="modal-body">
@@ -445,7 +472,7 @@
           <img src="projets/guardian/gir-al-capture-decran-2026-03-26-133208.webp" alt="Dashboard view" class="active"
             onclick="switchModalImg('modal-guardian-main-img', this.src, this)" />
         </div>
-                <div style="margin-top:1.2rem;border-radius:var(--radius);overflow:hidden;">
+        <div style="margin-top:1.2rem;border-radius:var(--radius);overflow:hidden;">
           <video controls preload="none" style="width:100%;border-radius:var(--radius);"
             poster="projets/guardian/IMG_20260326_190028294.jpg">
             <source src="projets/guardian/VID_20260312_122059891.mp4" type="video/mp4" />
@@ -592,6 +619,60 @@
     </div>
   </div>
 
+  <!-- AI-CG Modal -->
+  <div class="modal-overlay" id="modal-aicg" role="dialog" aria-modal="true" aria-label="AI-CG project details">
+    <div class="modal">
+      <div class="modal-media">
+        <img src="projets/AI-CG/3D1.png" alt="AI-CG project concept" id="modal-aicg-main-img" />
+        <button class="modal-close" id="modal-aicg-close" aria-label="Close AI-CG modal">✕</button>
+      </div>
+      <div class="modal-body">
+        <h2 class="modal-title">AI-CG Web Apps</h2>
+        <div class="modal-desc" style="display:flex;flex-direction:column;gap:1rem;">
+          <p>
+            A collection of three distinct web applications exploring Computer Graphics and Artificial Intelligence
+            running directly in the browser:
+          </p>
+          <ul style="padding-left:1.5rem;display:flex;flex-direction:column;gap:0.8rem;">
+            <li><strong>Digit Classifier:</strong> A browser-based neural network classifier (MLP and CNN) trained via
+              tinygrad and deployed via WebGPU. <a href="https://gir-ale.github.io/AICG-Digit-Classifier/"
+                target="_blank" style="color:var(--sienna);text-decoration:underline;font-weight:600;">Live Demo</a>
+            </li>
+            <li><strong>Raymarch Scene Editor:</strong> A real-time 3D scene editor using WGSL shaders and WebGPU.
+              Features dynamic combination and blending between geometric shapes. <a
+                href="https://gir-ale.github.io/AICG-Raymarch-Scene-Editor/" target="_blank"
+                style="color:var(--sienna);text-decoration:underline;font-weight:600;">Live Demo</a></li>
+            <li><strong>Local LLM Literature Reviewer:</strong> A WebLLM-based RAG application for privacy-first AI
+              agent interaction, entirely hosted on the user's machine. <a href="https://gir-ale.github.io/AICG-LLM/"
+                target="_blank" style="color:var(--sienna);text-decoration:underline;font-weight:600;">Live Demo</a>
+            </li>
+          </ul>
+        </div>
+        <div style="display:flex;gap:.6rem;flex-wrap:wrap;margin-top:1rem;">
+          <span class="project-tag"
+            style="background:var(--parchment);color:var(--clay);font-size:.8rem;padding:.3rem .8rem;border-radius:50px;font-weight:600;">Artificial
+            Intelligence</span>
+          <span class="project-tag"
+            style="background:var(--parchment);color:var(--clay);font-size:.8rem;padding:.3rem .8rem;border-radius:50px;font-weight:600;">Computer
+            Graphics</span>
+          <span class="project-tag"
+            style="background:var(--parchment);color:var(--clay);font-size:.8rem;padding:.3rem .8rem;border-radius:50px;font-weight:600;">LLM
+            Integration</span>
+        </div>
+        <div class="modal-gallery" role="list" aria-label="AI-CG project gallery">
+          <img src="projets/AI-CG/3D1.png" alt="AI-CG 3D view 1" class="active"
+            onclick="switchModalImg('modal-aicg-main-img', this.src, this)" />
+          <img src="projets/AI-CG/3D2.png" alt="AI-CG 3D view 2"
+            onclick="switchModalImg('modal-aicg-main-img', this.src, this)" />
+          <img src="projets/AI-CG/DIGIT.png" alt="Digit Recognition"
+            onclick="switchModalImg('modal-aicg-main-img', this.src, this)" />
+          <img src="projets/AI-CG/LLM.png" alt="LLM Integration"
+            onclick="switchModalImg('modal-aicg-main-img', this.src, this)" />
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- ═══════════════════════════════════════
        JAVASCRIPT
   ════════════════════════════════════════ -->
@@ -656,7 +737,7 @@
     skillFills.forEach(el => { el.style.width = '0'; skillObs.observe(el); });
 
     /* ── Project modal logic ── */
-    const projects = ['guardian', 'petal', 'blender', 'crystalboard'];
+    const projects = ['guardian', 'petal', 'blender', 'crystalboard', 'aicg'];
 
     function openModal(id) {
       const overlay = document.getElementById('modal-' + id);
