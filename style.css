@@ -45,6 +45,7 @@ html {
 }
 
 body {
+  zoom: 0.75;
   font-family: var(--font-body);
   background: var(--cream);
   color: var(--ink);
@@ -195,7 +196,7 @@ ul {
 
 /* ---- HERO ---- */
 #hero {
-  min-height: 100svh;
+  min-height: calc(100svh / 0.75);
   display: grid;
   place-items: center;
   position: relative;
