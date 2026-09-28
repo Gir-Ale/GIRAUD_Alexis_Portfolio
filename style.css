@@ -902,10 +902,16 @@ section {
   height: 44px;
   background: var(--parchment);
   border-radius: var(--radius-sm);
-  display: grid;
-  place-items: center;
-  font-size: 1.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   flex-shrink: 0;
+  color: var(--bark);
+  transition: color .25s;
+}
+
+.contact-link:hover .contact-link-icon {
+  color: var(--sienna);
 }
 
 .contact-link-label {
@@ -982,6 +988,169 @@ footer span {
 }
 
 /* ---- MODAL ---- */
+
+/* AI-CG wide modal override */
+.modal-aicg-wide {
+  width: min(96vw, 1080px);
+  max-height: 92svh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+}
+
+.modal-close-aicg {
+  position: absolute;
+  top: 1.2rem;
+  right: 1.2rem;
+  z-index: 10;
+}
+
+/* Tab bar */
+.aicg-tabs {
+  display: flex;
+  gap: .5rem;
+  background: var(--parchment);
+  border-radius: var(--radius);
+  padding: .35rem;
+  width: fit-content;
+}
+
+.aicg-tab-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: .45rem;
+  background: transparent;
+  border: none;
+  border-radius: calc(var(--radius) - 1px);
+  padding: .55rem 1.2rem;
+  font-family: var(--font-body);
+  font-size: .9rem;
+  font-weight: 600;
+  color: var(--clay);
+  cursor: pointer;
+  transition: background .2s, color .2s, box-shadow .2s;
+  white-space: nowrap;
+}
+
+.aicg-tab-btn.active {
+  background: var(--white);
+  color: var(--bark);
+  box-shadow: var(--shadow-sm);
+}
+
+.aicg-tab-btn:not(.active):hover {
+  background: rgba(255,255,255,.6);
+  color: var(--sienna);
+}
+
+.aicg-tab-icon {
+  font-size: 1rem;
+  line-height: 1;
+}
+
+/* Panel */
+.aicg-panel {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.aicg-panel[hidden] {
+  display: none;
+}
+
+/* iframe container */
+.aicg-iframe-wrap {
+  position: relative;
+  flex: 1;
+  min-height: 480px;
+  background: var(--parchment);
+}
+
+.aicg-iframe-wrap iframe {
+  width: 100%;
+  height: 100%;
+  min-height: 480px;
+  border: none;
+  display: block;
+  opacity: 0;
+  transition: opacity .4s ease;
+}
+
+.aicg-iframe-wrap.loaded iframe {
+  opacity: 1;
+}
+
+/* Loading dots */
+.aicg-iframe-loader {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .5rem;
+  pointer-events: none;
+  transition: opacity .4s ease;
+}
+
+.aicg-iframe-wrap.loaded .aicg-iframe-loader {
+  opacity: 0;
+}
+
+.aicg-loader-dot {
+  width: 10px;
+  height: 10px;
+  background: var(--sienna);
+  border-radius: 50%;
+  animation: aicgDotBounce 1.2s infinite ease-in-out both;
+}
+
+.aicg-loader-dot:nth-child(2) { animation-delay: .2s; }
+.aicg-loader-dot:nth-child(3) { animation-delay: .4s; }
+
+@keyframes aicgDotBounce {
+  0%, 80%, 100% { transform: scale(0.6); opacity: .4; }
+  40% { transform: scale(1); opacity: 1; }
+}
+
+/* Open full page button */
+.aicg-open-btn {
+  position: absolute;
+  bottom: .8rem;
+  right: .8rem;
+  background: rgba(247, 243, 238, .92);
+  backdrop-filter: blur(8px);
+  border: 1px solid var(--sand);
+  border-radius: var(--radius-pill);
+  padding: .4rem 1rem;
+  font-size: .8rem;
+  font-weight: 700;
+  color: var(--bark);
+  text-decoration: none;
+  transition: background .2s, color .2s, transform .2s;
+  z-index: 5;
+}
+
+.aicg-open-btn:hover {
+  background: var(--sienna);
+  color: var(--white);
+  border-color: var(--sienna);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 700px) {
+  .aicg-tab-btn {
+    padding: .5rem .8rem;
+    font-size: .8rem;
+  }
+  .aicg-iframe-wrap,
+  .aicg-iframe-wrap iframe {
+    min-height: 340px;
+  }
+}
+
 .modal-overlay {
   position: fixed;
   inset: 0;
@@ -1003,8 +1172,8 @@ footer span {
 .modal {
   background: var(--white);
   border-radius: var(--radius-lg);
-  width: min(92vw, 820px);
-  max-height: 90svh;
+  width: min(95vw, 1240px);
+  max-height: 95svh;
   overflow: auto;
   box-shadow: var(--shadow-lg);
   transform: translateY(30px) scale(.97);
@@ -1198,6 +1367,7 @@ footer span {
     padding: 2rem;
     gap: 1.5rem;
     border-bottom: 1px solid var(--sand);
+    z-index: 99;
   }
 
   .nav-links.open {
@@ -1258,6 +1428,40 @@ footer span {
   #hero {
     padding: 7rem 1.5rem 4rem;
   }
+
+  /* Modal full-screen on tablet */
+  .modal {
+    width: 98vw;
+    max-height: 96svh;
+    border-radius: var(--radius);
+  }
+
+  .modal-aicg-wide {
+    width: 100vw;
+    max-height: 100svh;
+    border-radius: 0;
+  }
+
+  /* AI-CG tabs wrap on tablet */
+  .aicg-tabs {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  .aicg-tab-btn {
+    flex: 1;
+    justify-content: center;
+    font-size: .85rem;
+    padding: .5rem .8rem;
+  }
+
+  /* Contact link value truncate */
+  .contact-link-value {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 220px;
+  }
 }
 
 @media (max-width: 600px) {
@@ -1274,6 +1478,70 @@ footer span {
   }
 
   .modal-body {
-    padding: 1.5rem;
+    padding: 1.2rem 1rem 1rem;
+  }
+
+  /* Stacked modal media on phone */
+  .modal-media {
+    aspect-ratio: 4/3;
+  }
+
+  /* AI-CG — make tabs scrollable instead of wrapping on very small screens */
+  .aicg-tabs {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  .aicg-tabs::-webkit-scrollbar { display: none; }
+
+  .aicg-tab-btn {
+    flex: 0 0 auto;
+    font-size: .8rem;
+    padding: .5rem .7rem;
+  }
+
+  .aicg-iframe-wrap,
+  .aicg-iframe-wrap iframe {
+    min-height: 300px;
+  }
+
+  /* Hero actions stack */
+  .hero-actions {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .btn {
+    width: 100%;
+    justify-content: center;
+    max-width: 280px;
+  }
+
+  /* Section padding tighter */
+  section {
+    padding: 3rem 1rem;
+  }
+
+  #hero {
+    padding: 6rem 1rem 3rem;
+  }
+
+  /* Contact form full width */
+  .contact-link-value {
+    max-width: 160px;
+  }
+
+  /* Modal gallery scroll */
+  .modal-gallery {
+    gap: .5rem;
+  }
+  .modal-gallery img {
+    height: 60px;
+  }
+
+  /* Crystalboard fix */
+  .crystalboard-body {
+    padding: 1.2rem;
   }
 }
