@@ -308,6 +308,10 @@ section { padding: 6rem 3rem; }
   grid-column: span 2;
   display: grid; grid-template-columns: 1.2fr 1fr;
 }
+.crystalboard-card { grid-column: span 2; }
+.crystalboard-inner { display: grid; grid-template-columns: 1fr 1fr; }
+.crystalboard-img { height: 260px; }
+.crystalboard-body { justify-content: center; padding: 2.5rem; }
 .project-img-wrap {
   position: relative; overflow: hidden;
   aspect-ratio: 16/10;
@@ -628,7 +632,11 @@ footer span { color: var(--sienna-light); font-weight: 600; }
   .about-inner, .contact-inner { grid-template-columns: 1fr; gap: 2.5rem; }
   .about-accent-card { right: 1rem; bottom: -1rem; }
   .projects-grid { grid-template-columns: 1fr; }
-  .project-card.featured { grid-column: auto; display: flex; }
+  .project-card.featured { grid-column: auto; display: flex; flex-direction: column; }
+  .crystalboard-card { grid-column: auto; }
+  .crystalboard-inner { display: flex; flex-direction: column; }
+  .crystalboard-img { height: auto; aspect-ratio: 16/10; }
+  .crystalboard-body { padding: 1.8rem; }
   .skills-grid { grid-template-columns: 1fr 1fr; }
   section { padding: 4rem 1.5rem; }
   #hero { padding: 7rem 1.5rem 4rem; }
