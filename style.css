@@ -20,9 +20,11 @@
   --shadow-sm: 0 2px 8px rgba(42, 31, 24, .08);
   --shadow-md: 0 8px 32px rgba(42, 31, 24, .12);
   --shadow-lg: 0 20px 60px rgba(42, 31, 24, .16);
-  --radius: 16px;
-  --radius-sm: 8px;
-  --radius-lg: 28px;
+  --radius: 5px;
+  --radius-sm: 3px;
+  --radius-lg: 9px;
+  --radius-pill: 7px;
+  --radius-chip: 1px;
   --transition: .35s cubic-bezier(.22, .68, 0, 1.2);
   --font-body: 'Outfit', sans-serif;
   --font-serif: 'Fraunces', serif;
@@ -155,7 +157,7 @@ ul {
   background: var(--sienna);
   color: var(--white) !important;
   padding: .5rem 1.4rem;
-  border-radius: 50px;
+  border-radius: var(--radius-pill);
   font-weight: 600;
   font-size: .9rem;
   transition: background var(--transition), transform var(--transition), box-shadow var(--transition) !important;
@@ -238,7 +240,7 @@ ul {
   border: 1px solid rgba(192, 96, 42, .2);
   color: var(--sienna);
   padding: .4rem 1rem;
-  border-radius: 50px;
+  border-radius: var(--radius-pill);
   font-size: .85rem;
   font-weight: 600;
   letter-spacing: .04em;
@@ -293,7 +295,7 @@ ul {
   align-items: center;
   gap: .5rem;
   padding: .8rem 2rem;
-  border-radius: 50px;
+  border-radius: var(--radius-pill);
   font-family: var(--font-body);
   font-size: 1rem;
   font-weight: 600;
@@ -478,7 +480,7 @@ section {
   border: 1px solid var(--sand);
   color: var(--clay);
   padding: .35rem .9rem;
-  border-radius: 50px;
+  border-radius: var(--radius-pill);
   font-size: .85rem;
   font-weight: 500;
   transition: border-color .25s, color .25s;
@@ -599,7 +601,7 @@ section {
   font-size: .72rem;
   font-weight: 700;
   padding: .25rem .7rem;
-  border-radius: 50px;
+  border-radius: var(--radius-pill);
   letter-spacing: .03em;
   text-transform: uppercase;
 }
@@ -665,7 +667,7 @@ section {
   font-size: .75rem;
   font-weight: 600;
   padding: .2rem .6rem;
-  border-radius: 4px;
+  border-radius: var(--radius-chip);
 }
 
 .project-arrow {
