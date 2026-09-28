@@ -4,45 +4,69 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Alexis Giraud ,Engineering Portfolio</title>
+  <title>Alexis Giraud — Engineering & Creative Technology Portfolio</title>
   <meta name="description"
-    content="Portfolio of Alexis Giraud,engineering student. Showcasing projects in 3D design, embedded systems, robotics and more." />
+    content="Engineering portfolio of Alexis Giraud. Showcasing projects in 3D design, embedded systems, robotics, and creative technology." />
+  
+  <!-- Fonts: Inter & Plus Jakarta Sans & JetBrains Mono (Minimalist Teonak aesthetic) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet" />
+
   <link rel="stylesheet" href="style.css" />
-  <!-- Favicon (inline SVG as data URI) -->
+  
+  <!-- Favicon -->
   <link rel="icon"
-    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%23C0602A'/><text x='50%25' y='54%25' font-size='18' text-anchor='middle' dominant-baseline='middle' fill='white' font-family='serif' font-weight='600'>AG</text></svg>" />
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%23D25424'/><text x='50%25' y='54%25' font-size='18' text-anchor='middle' dominant-baseline='middle' fill='white' font-family='sans-serif' font-weight='700'>AG</text></svg>" />
 </head>
 
 <body>
+
+  <!-- Top Scroll Progress Bar (Topology aesthetic) -->
+  <div id="scroll-progress" aria-hidden="true"></div>
 
   <!-- ═══════════════════════════════════════
        NAVBAR
   ════════════════════════════════════════ -->
   <nav id="navbar" role="navigation" aria-label="Main navigation">
-    <a class="nav-logo" href="#hero">Alexis <span>Giraud</span></a>
+    <div class="nav-brand-group">
+      <a class="nav-logo" href="#hero">Alexis <span>Giraud</span></a>
+      <span class="nav-logo-badge">ESILV CT A5</span>
+    </div>
+
+    <!-- Live Status Pill -->
+    <div class="nav-status" aria-label="Current status">
+      <span class="status-dot" aria-hidden="true"></span>
+      <span>Available for Internship / R&D</span>
+    </div>
+
     <ul class="nav-links" id="nav-links">
       <li><a href="#about">About</a></li>
       <li><a href="#projects">Projects</a></li>
       <li><a href="#education">Education</a></li>
       <li><a href="#contact" class="nav-cta">Contact</a></li>
     </ul>
+
     <button class="nav-hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
   </nav>
 
   <!-- ═══════════════════════════════════════
-       HERO
+       HERO (Minimalist & Dynamic)
   ════════════════════════════════════════ -->
   <section id="hero" aria-label="Introduction">
-    <div class="hero-bg"></div>
+    <div class="hero-bg" id="hero-bg-parallax"></div>
+    <div class="hero-ambient-glow" aria-hidden="true"></div>
     <div class="hero-bg-gif" aria-hidden="true"></div>
     <div class="hero-noise" aria-hidden="true"></div>
 
     <div class="hero-content">
-      <div class="hero-badge">
-        <span class="hero-badge-dot" aria-hidden="true"></span>
-        Engineering Student
+      <div class="hero-badge-wrap">
+        <div class="hero-badge">
+          <span class="hero-badge-dot" aria-hidden="true"></span>
+          Engineering Student · Creative Technology
+        </div>
       </div>
 
       <h1 class="hero-title">
@@ -50,8 +74,8 @@
       </h1>
 
       <p class="hero-sub">
-        Designing, building & Testing ,from modular acrylic lamps to autonomous
-        ESP32-powered surveillance robots. I bring ideas from sketch to reality.
+        Designing, building & testing — from modular physical products to autonomous
+        ESP32 surveillance robotics. Bringing ideas from first sketch to working reality.
       </p>
 
       <div class="hero-actions">
@@ -61,7 +85,7 @@
             <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
             <polyline points="9 22 9 12 15 12 15 22" />
           </svg>
-          View Projects
+          View Selected Projects
         </a>
         <a href="projets/Alexis_Giraud_CV_Stage_Ingenieur_2027.pdf" download class="btn btn-outline" id="hero-cv-btn">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
@@ -82,68 +106,68 @@
   </section>
 
   <!-- ═══════════════════════════════════════
-       ABOUT
+       ABOUT (Minimalist Teonak Aesthetic)
   ════════════════════════════════════════ -->
   <section id="about" aria-label="About me">
     <div class="about-inner">
 
       <div class="about-visual reveal">
         <div class="about-gif-wrap">
-          <img src="projets/guardian/IMG_20260314_211314824.jpg" alt="fpv octopedal robot" loading="lazy" />
+          <img src="projets/guardian/IMG_20260314_211314824.jpg" alt="FPV octopedal robot physical prototype" loading="lazy" />
+        </div>
+        <div class="about-accent-card">
+          <span class="about-accent-icon" aria-hidden="true">⚙</span>
+          <div>
+            <span class="about-accent-label">Hardware & Software Integration</span>
+            <span class="about-accent-sub">CAD · Robotics · Embedded Systems</span>
+          </div>
         </div>
       </div>
 
       <div class="about-text">
-        <p class="section-label">About Me</p>
-        <h2 class="section-title">Building Projects<br /><em style="font-style:italic;color:var(--sienna)">From A to Z
-          </em></h2>
+        <p class="section-label">[ 01 // OVERVIEW ]</p>
+        <h2 class="section-title">Building Projects<br /><em>From Concept to Prototype</em></h2>
         <p class="section-desc reveal reveal-delay-1">
-          I'm a engineering student passionate about bringing project from sketched to working prototypes.
-          I started 3D modeling in 2021, first has a hobby, designing objects, scenes, animation, and then with
-          time, I developed skills in CAD, 3D printing, electronics, programing, robotics, etc. I love to build project
-          from the ground up
-          and have been pushing myself to do harder and more ambitious projects each time, as part of my curiculum and
-          own free time.
+          I am an engineering student at ESILV passionate about bringing projects from sketched ideas to fully working prototypes.
+          I started 3D modeling in 2021, first as a hobby designing objects, scenes, and animations. With time, I developed rigorous skills in CAD, 3D printing, electronics, embedded programming, and robotics.
         </p>
-        <p class="section-desc reveal reveal-delay-2" style="margin-top:.8rem">
-          My projects span from product design (lamps, workstation concepts), robotics
-          (autonomous ESP32-CAM surveillance robot) and technological research (Creation of a screen technologie able to
-          record the user trough his entire display).
-          I thrive at the intersection of hardware and software.
+        <p class="section-desc reveal reveal-delay-2">
+          My projects span from physical product design (modular acrylic lamps, workstation concepts) to autonomous robotics
+          (an ESP32-CAM surveillance robot with real-time browser telemetry) and exploratory technology (display-integrated camera research).
+          I thrive at the intersection where mechanics, electronics, and software merge.
         </p>
-        <div class="about-tags reveal reveal-delay-3" style="margin-top:1.5rem">
+        <div class="about-tags reveal reveal-delay-3" style="margin-top:1.8rem">
           <span class="about-tag">CAD / SolidWorks / Fusion 360</span>
           <span class="about-tag">FDM 3D Printing</span>
-          <span class="about-tag">Blender / Substance 3D painter</span>
+          <span class="about-tag">Blender / Cycles Rendering</span>
           <span class="about-tag">Embedded C / C++</span>
-          <span class="about-tag">ESP32 / Arduino</span>
-          <span class="about-tag">Python</span>
-          <span class="about-tag">Prototyping</span>
-          <span class="about-tag">Electronics / Kicad</span>
+          <span class="about-tag">ESP32 & Microcontrollers</span>
+          <span class="about-tag">Python & Computer Graphics</span>
+          <span class="about-tag">Rapid Prototyping</span>
+          <span class="about-tag">KiCad / PCB Design</span>
         </div>
       </div>
     </div>
   </section>
 
   <!-- ═══════════════════════════════════════
-       PROJECTS
+       PROJECTS (Topology Spotlight Cards)
   ════════════════════════════════════════ -->
   <section id="projects" aria-label="Projects">
     <div class="projects-inner">
       <div class="section-header">
-        <p class="section-label">Portfolio</p>
-        <h2 class="section-title">Selected Projects</h2>
-        <p class="section-desc">A collection of engineering projects spanning product design, 3D modelling, and
-          autonomous systems.</p>
+        <p class="section-label">[ 02 // SELECTED WORKS ]</p>
+        <h2 class="section-title">Featured Projects</h2>
+        <p class="section-desc">A curated collection of engineering works spanning mechanical design, autonomous robotics, and interactive systems.</p>
       </div>
 
       <div class="projects-grid">
 
-        <!-- GUARDIAN ,featured (spans 2 cols) -->
+        <!-- GUARDIAN — featured (spans 2 cols) -->
         <article class="project-card featured reveal" id="card-guardian" data-project="guardian" role="button"
           tabindex="0" aria-label="Open Guardian project details">
           <div class="project-img-wrap">
-            <img src="projets/guardian/1M2.png" alt="Guardian surveillance robot ,live camera feed dashboard"
+            <img src="projets/guardian/1M2.png" alt="Guardian surveillance robot — live camera feed dashboard"
               loading="lazy" />
             <div class="project-img-overlay" aria-hidden="true"></div>
             <div class="project-tags">
@@ -153,12 +177,11 @@
             </div>
           </div>
           <div class="project-body">
-            <span class="project-num">01 ,Featured</span>
+            <span class="project-num">01 // Featured Prototype</span>
             <h3 class="project-title">Guardian</h3>
             <p class="project-desc">
-              An octopod surveillance robot using the Theo Jansen mechanism for stable locomotion over uneven terrain.
-              Powered by an ESP32, it streams live FPV video via an ESP-CAM mounted on a pan/tilt servo mechanism.
-              Controlled through a custom web dashboard with full directional control and audio output.
+              An octopod surveillance robot using the Theo Jansen linkage mechanism for terrain stability where wheels fail.
+              Powered by an ESP32, it streams live FPV video from a pan/tilt servo assembly and is steered through a custom browser dashboard with full directional telemetry and audio feedback.
             </p>
             <div class="project-footer">
               <div class="project-tech">
@@ -172,61 +195,59 @@
           </div>
         </article>
 
-        <!-- PETAL -->
+        <!-- PETAL LAMP -->
         <article class="project-card reveal reveal-delay-1" id="card-petal" data-project="petal" role="button"
           tabindex="0" aria-label="Open Petal project details">
           <div class="project-img-wrap">
-            <img src="projets/Petal/1774976670671.jpg" alt="Petal lamp 3D render ,orange petal-shaped table lamp"
+            <img src="projets/Petal/1774976670671.jpg" alt="Petal lamp physical prototype in orange acrylic"
               loading="lazy" />
             <div class="project-img-overlay" aria-hidden="true"></div>
             <div class="project-tags">
               <span class="project-tag">Product Design</span>
-              <span class="project-tag">Laser cutting</span>
+              <span class="project-tag">Laser Cutting</span>
             </div>
           </div>
           <div class="project-body">
-            <span class="project-num">02</span>
+            <span class="project-num">02 // Physical Product</span>
             <h3 class="project-title">Petal Lamp</h3>
             <p class="project-desc">
-              A modular acrylic lampshade that adapts to your desired ambiance —
-              conceived in SolidWorks, prototyped via FDM 3D printing, produced by laser cuter, and launched
-              on Kickstarter where it raised 337% of its funding goal (16 backers).
+              A modular acrylic lampshade adapting to ambient lighting needs — designed in SolidWorks & Blender, prototyped via FDM 3D printing and laser cutting, and successfully funded on Kickstarter at 337% of its initial goal.
             </p>
             <div class="project-footer">
               <div class="project-tech">
                 <span>SolidWorks</span>
-                <span>Laser cutting</span>
+                <span>Laser Cutting</span>
                 <span>Acrylic</span>
-                <span>Kickstarter</span>
+                <span>Kickstarter 337%</span>
               </div>
               <div class="project-arrow" aria-hidden="true">↗</div>
             </div>
           </div>
         </article>
 
-        <!-- BLENDER -->
+        <!-- BLENDER 3D MODELLING -->
         <article class="project-card reveal reveal-delay-2" id="card-blender" data-project="blender" role="button"
           tabindex="0" aria-label="Open Blender project details">
           <div class="project-img-wrap">
-            <img src="projets/blender/g-ral-2.jpg" alt="Blender 3D modelling ,detailed armoured vehicle render"
+            <img src="projets/blender/g-ral-2.jpg" alt="Detailed armoured vehicle 3D model render"
               loading="lazy" />
             <div class="project-img-overlay" aria-hidden="true"></div>
             <div class="project-tags">
               <span class="project-tag">3D Modelling</span>
-              <span class="project-tag">Rendering</span>
+              <span class="project-tag">Cycles Render</span>
             </div>
           </div>
           <div class="project-body">
-            <span class="project-num">03</span>
+            <span class="project-num">03 // Computer Graphics</span>
             <h3 class="project-title">3D Modelling</h3>
             <p class="project-desc">
-              3D work created in Blender since 2021 ,covering objects, scenes, animations,
-              (art oriented).
+              A comprehensive body of 3D artwork and hard-surface modelling in Blender since 2021 — exploring complex topology, mechanical assemblies, procedural shaders, and cinematic lighting setups.
             </p>
             <div class="project-footer">
               <div class="project-tech">
                 <span>Blender</span>
-                <span>Cycles Render</span>
+                <span>Cycles Engine</span>
+                <span>PBR Textures</span>
               </div>
               <div class="project-arrow" aria-hidden="true">↗</div>
             </div>
@@ -238,27 +259,25 @@
           data-project="crystalboard" role="button" tabindex="0" aria-label="Open Crystalboard project details">
           <div class="crystalboard-inner">
             <div class="project-img-wrap crystalboard-img">
-              <img src="projets/crystalboard/visu1.png" alt="Crystalboard ,futuristic workstation 3D visualisation"
+              <img src="projets/crystalboard/visu1.png" alt="Crystalboard futuristic workstation 3D visualization"
                 loading="lazy" />
               <div class="project-img-overlay" aria-hidden="true"></div>
               <div class="project-tags">
                 <span class="project-tag">Product Concept</span>
-                <span class="project-tag">Industrial Design</span>
+                <span class="project-tag">HCI Hardware</span>
               </div>
             </div>
             <div class="project-body crystalboard-body">
-              <span class="project-num">04</span>
+              <span class="project-num">04 // Hardware Research Concept</span>
               <h3 class="project-title">Crystalboard</h3>
               <p class="project-desc">
-                A hardware concept for immersive video calling. It uses PDLC (liquid crystal) films to rapidly
-                switch between transparent and opaque states, capturing the user through the display to recreate
-                natural eye contact and body language.
+                An innovative hardware concept for immersive telepresence. Utilizing smart PDLC (liquid crystal) films to rapidly cycle between transparent and opaque states, it captures the user through the display to recreate genuine eye contact and spatial communication.
               </p>
               <div class="project-footer">
                 <div class="project-tech">
-                  <span>3D Design</span>
-                  <span>Blender</span>
+                  <span>PDLC Optics</span>
                   <span>Industrial Design</span>
+                  <span>Blender CAD</span>
                 </div>
                 <div class="project-arrow" aria-hidden="true">↗</div>
               </div>
@@ -270,24 +289,24 @@
         <article class="project-card reveal reveal-delay-2" id="card-aicg" data-project="aicg" role="button"
           tabindex="0" aria-label="Open AI-CG project details">
           <div class="project-img-wrap">
-            <img src="projets/AI-CG/3D1.png" alt="AI-CG 3D design" loading="lazy" />
+            <img src="projets/AI-CG/3D1.png" alt="AI-CG Computer Graphics web application interface" loading="lazy" />
             <div class="project-img-overlay" aria-hidden="true"></div>
             <div class="project-tags">
-              <span class="project-tag">AI</span>
-              <span class="project-tag">Graphics</span>
+              <span class="project-tag">AI / ML</span>
+              <span class="project-tag">WebGL / Shaders</span>
             </div>
           </div>
           <div class="project-body">
-            <span class="project-num">05</span>
+            <span class="project-num">05 // Web Applications</span>
             <h3 class="project-title">AI-CG Web Apps</h3>
             <p class="project-desc">
-              A collection of three independent web applications exploring Artificial Intelligence and Computer
-              Graphics: a Digit Classifier, a Raymarch Scene Editor, and a Local LLM RAG interface.
+              Three interactive browser applications bridging machine intelligence and real-time graphics: a neural digit classifier, a GPU raymarching shader editor, and an offline local LLM retrieval-augmented generation interface.
             </p>
             <div class="project-footer">
               <div class="project-tech">
-                <span>AI</span>
-                <span>3D Design</span>
+                <span>WebGPU / GLSL</span>
+                <span>Local LLM</span>
+                <span>Live Interactive</span>
               </div>
               <div class="project-arrow" aria-hidden="true">↗</div>
             </div>
@@ -304,29 +323,28 @@
   <section id="education" aria-label="Education timeline">
     <div class="edu-inner">
       <div class="section-header" style="text-align:center;">
-        <p class="section-label" style="justify-content:center;">Background</p>
-        <h2 class="section-title">Education</h2>
-        <p class="section-desc" style="margin:0 auto;">Academic journey shaping my engineering mindset.</p>
+        <p class="section-label" style="justify-content:center;">[ 03 // BACKGROUND ]</p>
+        <h2 class="section-title">Academic Journey</h2>
+        <p class="section-desc" style="margin:0 auto;">Engineering studies and international coursework shaping my technical foundation.</p>
       </div>
 
       <div class="edu-timeline" role="list">
 
-
         <div class="edu-item" role="listitem">
           <div class="edu-dot" aria-hidden="true"></div>
           <div class="edu-card">
-            <p class="edu-date">2022 ,2027</p>
-            <h3 class="edu-degree">Engineering Degree ,Major in Creative Technology</h3>
-            <p class="edu-school">ESILV (Paris La Défense) · R&amp;D, Embedded Systems &amp; Design</p>
+            <p class="edu-date">2022 — 2027</p>
+            <h3 class="edu-degree">Master of Engineering — Creative Technology</h3>
+            <p class="edu-school">ESILV (Paris La Défense) · R&amp;D, Embedded Systems, Robotics &amp; Industrial Prototyping</p>
           </div>
         </div>
 
         <div class="edu-item" role="listitem">
           <div class="edu-dot" aria-hidden="true"></div>
           <div class="edu-card">
-            <p class="edu-date">2024 ,2025</p>
-            <h3 class="edu-degree">Erasmus Exchange Semester ,Computer Science</h3>
-            <p class="edu-school">Tomas Bata University (Zlín, Czech Republic) · Faculty of Informatics</p>
+            <p class="edu-date">2024 — 2025</p>
+            <h3 class="edu-degree">Erasmus Exchange Semester — Computer Science</h3>
+            <p class="edu-school">Tomas Bata University (Zlín, Czech Republic) · Faculty of Applied Informatics</p>
           </div>
         </div>
 
@@ -335,124 +353,162 @@
   </section>
 
   <!-- ═══════════════════════════════════════
-       CONTACT
+       CONTACT & FOOTER (Ragged Edge Aesthetic)
+       - Editorial Statement
+       - Directory rows with 1-click Copy buttons
+       - Minimalist message form
   ════════════════════════════════════════ -->
   <section id="contact" aria-label="Contact section">
     <div class="contact-inner">
 
-      <div class="contact-text reveal">
-        <p class="section-label">Get in Touch</p>
-        <h2 class="section-title">Let's work<br /><em style="font-style:italic;color:var(--sienna)">together</em></h2>
-        <p class="section-desc">
-          Whether it's an internship, a project collaboration, or just a chat about
-          engineering ,feel free to reach out.
+      <!-- Ragged Edge Editorial Lead -->
+      <div class="ragged-lead reveal">
+        <span class="ragged-lead-label">[ 04 // CONNECT & COLLABORATE ]</span>
+        <h2 class="ragged-lead-title">Time to build<br /><em>something remarkable?</em></h2>
+        <p class="ragged-lead-desc">
+          Whether you're looking for an engineering intern, an R&amp;D collaborator, or exploring innovative hardware, robotics and prototyping opportunities — let's start the conversation.
         </p>
-
-        <div class="contact-links">
-          <a href="mailto:alexis.giraud74@gmail.com" class="contact-link" id="contact-email">
-            <div class="contact-link-icon" aria-hidden="true">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                stroke-linecap="round" stroke-linejoin="round">
-                <rect x="2" y="4" width="20" height="16" rx="2" />
-                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
-              </svg>
-            </div>
-            <div>
-              <span class="contact-link-label">Email</span>
-              <span class="contact-link-value">alexis.giraud74@gmail.com</span>
-            </div>
-          </a>
-          <a href="https://linkedin.com/in/alexis-giraud-572118295" target="_blank" rel="noopener" class="contact-link"
-            id="contact-linkedin">
-            <div class="contact-link-icon" aria-hidden="true">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                stroke-linecap="round" stroke-linejoin="round">
-                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
-                <rect x="2" y="9" width="4" height="12" />
-                <circle cx="4" cy="4" r="2" />
-              </svg>
-            </div>
-            <div>
-              <span class="contact-link-label">LinkedIn</span>
-              <span class="contact-link-value">linkedin.com/in/alexis-giraud-572118295</span>
-            </div>
-          </a>
-          <a href="https://github.com/Gir-Ale" target="_blank" rel="noopener" class="contact-link" id="contact-github">
-            <div class="contact-link-icon" aria-hidden="true">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                stroke-linecap="round" stroke-linejoin="round">
-                <path
-                  d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
-                <path d="M9 18c-4.51 2-5-2-7-2" />
-              </svg>
-            </div>
-            <div>
-              <span class="contact-link-label">GitHub</span>
-              <span class="contact-link-value">github.com/Gir-Ale</span>
-            </div>
-          </a>
-          <a href="projets/Alexis_Giraud_CV_Stage_Ingenieur_2027.pdf" download class="contact-link" id="contact-cv">
-            <div class="contact-link-icon" aria-hidden="true">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                stroke-linecap="round" stroke-linejoin="round">
-                <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z" />
-                <polyline points="14 2 14 8 20 8" />
-                <line x1="16" y1="13" x2="8" y2="13" />
-                <line x1="16" y1="17" x2="8" y2="17" />
-                <line x1="10" y1="9" x2="8" y2="9" />
-              </svg>
-            </div>
-            <div>
-              <span class="contact-link-label">Curriculum Vitae</span>
-              <span class="contact-link-value">Download CV (PDF)</span>
-            </div>
-          </a>
-        </div>
       </div>
 
-      <form class="contact-form reveal reveal-delay-1" id="contact-form" aria-label="Contact form"
-        onsubmit="handleFormSubmit(event)">
-        <h3 style="font-family:var(--font-serif);font-size:1.3rem;color:var(--bark);margin-bottom:.5rem;">Send a message
-        </h3>
-        <div class="form-group">
-          <label for="form-name">Name</label>
-          <input type="text" id="form-name" name="name" placeholder="Name" required />
-        </div>
-        <div class="form-group">
-          <label for="form-email">Email</label>
-          <input type="email" id="form-email" name="email" placeholder="email@example.com" required />
-        </div>
-        <div class="form-group">
-          <label for="form-subject">Subject</label>
-          <input type="text" id="form-subject" name="subject" placeholder="Internship / Collaboration / ..." />
-        </div>
-        <div class="form-group">
-          <label for="form-message">Message</label>
-          <textarea id="form-message" name="message" placeholder="Tell me about your project or opportunity..."
-            required></textarea>
-        </div>
-        <button type="submit" class="btn btn-primary" id="form-submit-btn" style="align-self:flex-start;">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-            <line x1="22" y1="2" x2="11" y2="13" />
-            <polygon points="22 2 15 22 11 13 2 9 22 2" />
-          </svg>
-          Send Message
-        </button>
-        <p id="form-feedback" style="font-size:.85rem;color:var(--clay);display:none;margin-top:-.5rem;"></p>
-      </form>
+      <!-- Split: Ragged Directory Rows + Minimalist Form -->
+      <div class="ragged-content-grid">
 
+        <!-- Ragged Edge Directory Rows -->
+        <div class="ragged-directory reveal">
+          
+          <!-- Email Row -->
+          <div class="ragged-row">
+            <span class="ragged-row-cat">Direct Inquiry</span>
+            <a href="mailto:alexis.giraud74@gmail.com" class="ragged-row-link" id="contact-email">
+              alexis.giraud74@gmail.com
+            </a>
+            <button class="ragged-copy-btn" data-copy="alexis.giraud74@gmail.com" aria-label="Copy email address">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"/>
+                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+              </svg>
+              <span>Copy</span>
+            </button>
+          </div>
+
+          <!-- LinkedIn Row -->
+          <div class="ragged-row">
+            <span class="ragged-row-cat">LinkedIn</span>
+            <a href="https://linkedin.com/in/alexis-giraud-572118295" target="_blank" rel="noopener" class="ragged-row-link" id="contact-linkedin">
+              in/alexis-giraud-572118295 ↗
+            </a>
+            <button class="ragged-copy-btn" data-copy="https://linkedin.com/in/alexis-giraud-572118295" aria-label="Copy LinkedIn URL">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"/>
+                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+              </svg>
+              <span>Copy</span>
+            </button>
+          </div>
+
+          <!-- GitHub Row -->
+          <div class="ragged-row">
+            <span class="ragged-row-cat">Source Code</span>
+            <a href="https://github.com/Gir-Ale" target="_blank" rel="noopener" class="ragged-row-link" id="contact-github">
+              github.com/Gir-Ale ↗
+            </a>
+            <button class="ragged-copy-btn" data-copy="https://github.com/Gir-Ale" aria-label="Copy GitHub URL">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"/>
+                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+              </svg>
+              <span>Copy</span>
+            </button>
+          </div>
+
+          <!-- CV Download Row -->
+          <div class="ragged-row">
+            <span class="ragged-row-cat">Curriculum</span>
+            <a href="projets/Alexis_Giraud_CV_Stage_Ingenieur_2027.pdf" download class="ragged-row-link" id="contact-cv">
+              curriculum vitae (PDF) ↓
+            </a>
+            <a href="projets/Alexis_Giraud_CV_Stage_Ingenieur_2027.pdf" download class="ragged-copy-btn" aria-label="Download CV">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                <polyline points="7 10 12 15 17 10"/>
+                <line x1="12" y1="15" x2="12" y2="3"/>
+              </svg>
+              <span>Download</span>
+            </a>
+          </div>
+
+          <!-- Base Location Row -->
+          <div class="ragged-row">
+            <span class="ragged-row-cat">Location</span>
+            <span class="ragged-row-link" style="cursor:default;">
+              Paris, France
+            </span>
+          </div>
+
+        </div>
+
+        <!-- Minimalist Message Form -->
+        <form class="contact-form reveal reveal-delay-1" id="contact-form" aria-label="Contact form"
+          onsubmit="handleFormSubmit(event)">
+          <h3 class="contact-form-title">Send a Direct Message</h3>
+          <div class="form-group">
+            <label for="form-name">Full Name</label>
+            <input type="text" id="form-name" name="name" placeholder="Your Name" required />
+          </div>
+          <div class="form-group">
+            <label for="form-email">Email Address</label>
+            <input type="email" id="form-email" name="email" placeholder="name@company.com" required />
+          </div>
+          <div class="form-group">
+            <label for="form-subject">Subject</label>
+            <input type="text" id="form-subject" name="subject" placeholder="Internship / Collaboration / Project" />
+          </div>
+          <div class="form-group">
+            <label for="form-message">Message</label>
+            <textarea id="form-message" name="message" placeholder="Tell me about your project, engineering team, or opportunity..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" id="form-submit-btn" style="align-self:flex-start;">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <line x1="22" y1="2" x2="11" y2="13" />
+              <polygon points="22 2 15 22 11 13 2 9 22 2" />
+            </svg>
+            Send Message
+          </button>
+          <p id="form-feedback" style="font-size:0.85rem;color:var(--accent);display:none;margin-top:-0.3rem;"></p>
+        </form>
+
+      </div>
     </div>
   </section>
 
   <!-- ═══════════════════════════════════════
-       FOOTER
+       GLOBAL FOOTER STRIP (Studio Quality)
   ════════════════════════════════════════ -->
   <footer>
-    <p>© 2026 <span>Alexis Giraud</span> </p>
+    <div class="footer-inner">
+      <div class="footer-top-row">
+        <div class="footer-brand">
+          Alexis <span>Giraud</span>
+        </div>
+
+        <!-- Live Dynamic Paris Clock -->
+        <div class="footer-clock-wrap">
+          <span class="footer-clock-dot" aria-hidden="true"></span>
+          <span id="paris-clock">Paris, FR · Loading...</span>
+        </div>
+      </div>
+
+      <div class="footer-bottom-row">
+        <p>© 2026 Alexis Giraud — Creative Technology</p>
+        <button class="footer-back-to-top" id="back-to-top" aria-label="Scroll back to top">
+          Back to top ↑
+        </button>
+      </div>
+    </div>
   </footer>
 
   <!-- ═══════════════════════════════════════
-       PROJECT MODALS
+       PROJECT MODALS (Preserved Functionality)
   ════════════════════════════════════════ -->
 
   <!-- Guardian Modal -->
@@ -474,20 +530,12 @@
           The entire mechanism was CAD-modelled, iteratively refined, and 3D-printed, using an octopod configuration to
           ensure constant ground contact and mechanical synchronization.
         </p>
-        <div style="display:flex;gap:.6rem;flex-wrap:wrap;">
-          <span class="project-tag"
-            style="background:var(--parchment);color:var(--clay);font-size:.8rem;padding:.3rem .8rem;border-radius:var(--radius-pill);font-weight:600;">ESP32-CAM</span>
-          <span class="project-tag"
-            style="background:var(--parchment);color:var(--clay);font-size:.8rem;padding:.3rem .8rem;border-radius:var(--radius-pill);font-weight:600;">C++
-            / Arduino</span>
-          <span class="project-tag"
-            style="background:var(--parchment);color:var(--clay);font-size:.8rem;padding:.3rem .8rem;border-radius:var(--radius-pill);font-weight:600;">WebSockets</span>
-          <span class="project-tag"
-            style="background:var(--parchment);color:var(--clay);font-size:.8rem;padding:.3rem .8rem;border-radius:var(--radius-pill);font-weight:600;">Custom
-            PCB</span>
-          <span class="project-tag"
-            style="background:var(--parchment);color:var(--clay);font-size:.8rem;padding:.3rem .8rem;border-radius:var(--radius-pill);font-weight:600;">3D
-            Printing</span>
+        <div style="display:flex;gap:0.6rem;flex-wrap:wrap;">
+          <span class="project-tag">ESP32-CAM</span>
+          <span class="project-tag">C++ / Arduino</span>
+          <span class="project-tag">WebSockets</span>
+          <span class="project-tag">Custom PCB</span>
+          <span class="project-tag">3D Printing</span>
         </div>
         <div class="modal-gallery" role="list" aria-label="Guardian project gallery">
           <img src="projets/guardian/1.png" alt="Guardian hardware photo 1"
@@ -501,8 +549,8 @@
           <img src="projets/guardian/gir-al-capture-decran-2026-03-26-133208.webp" alt="Dashboard view" class="active"
             onclick="switchModalImg('modal-guardian-main-img', this.src, this)" />
         </div>
-        <div style="margin-top:1.2rem;border-radius:var(--radius);overflow:hidden;">
-          <video controls preload="none" style="width:100%;border-radius:var(--radius);"
+        <div style="margin-top:1.2rem;border-radius:var(--radius-sm);overflow:hidden;">
+          <video controls preload="none" style="width:100%;border-radius:var(--radius-sm);"
             poster="projets/guardian/IMG_20260326_190028294.jpg">
             <source src="projets/guardian/VID_20260312_122059891.mp4" type="video/mp4" />
           </video>
@@ -526,21 +574,14 @@
           and petal geometry, then physically prototyped using laser cutting for precise acrylic manufacturing. The
           project
           was launched on Kickstarter (March–April 2026) and successfully raised 337% of
-          its €176 goal ,reaching €596 with 16 backers. The GIF demonstrates the lamp
+          its €176 goal, reaching €596 with 16 backers. The GIF demonstrates the lamp
           in use, showcasing how the blades create a warm, directional atmosphere.
         </p>
-        <div style="display:flex;gap:.6rem;flex-wrap:wrap;">
-          <span class="project-tag"
-            style="background:var(--parchment);color:var(--clay);font-size:.8rem;padding:.3rem .8rem;border-radius:var(--radius-pill);font-weight:600;">Blender</span>
-          <span class="project-tag"
-            style="background:var(--parchment);color:var(--clay);font-size:.8rem;padding:.3rem .8rem;border-radius:var(--radius-pill);font-weight:600;">FDM
-            3D Printing</span>
-          <span class="project-tag"
-            style="background:var(--parchment);color:var(--clay);font-size:.8rem;padding:.3rem .8rem;border-radius:var(--radius-pill);font-weight:600;">Acrylic
-            / Modular</span>
-          <span class="project-tag"
-            style="background:var(--parchment);color:var(--clay);font-size:.8rem;padding:.3rem .8rem;border-radius:var(--radius-pill);font-weight:600;">Kickstarter
-            ,337% funded</span>
+        <div style="display:flex;gap:0.6rem;flex-wrap:wrap;">
+          <span class="project-tag">Blender</span>
+          <span class="project-tag">FDM 3D Printing</span>
+          <span class="project-tag">Acrylic / Modular</span>
+          <span class="project-tag">Kickstarter 337% funded</span>
         </div>
         <div class="modal-gallery" role="list" aria-label="Petal project gallery">
           <img src="projets/Petal/thumbnail2.png" alt="Petal render" class="active"
@@ -567,20 +608,13 @@
         <p class="modal-desc">
           A body of 3D work created in Blender since 2021, spanning objects, scenes,
           animations, and art projects. Rendered with custom photorealistic materials under studio lighting.
-          All theses projects where done alone on my free time.
+          All these projects were done independently on personal initiative.
         </p>
-        <div style="display:flex;gap:.6rem;flex-wrap:wrap;">
-          <span class="project-tag"
-            style="background:var(--parchment);color:var(--clay);font-size:.8rem;padding:.3rem .8rem;border-radius:var(--radius-pill);font-weight:600;">Blender</span>
-          <span class="project-tag"
-            style="background:var(--parchment);color:var(--clay);font-size:.8rem;padding:.3rem .8rem;border-radius:var(--radius-pill);font-weight:600;">Cycles
-            Render</span>
-          <span class="project-tag"
-            style="background:var(--parchment);color:var(--clay);font-size:.8rem;padding:.3rem .8rem;border-radius:var(--radius-pill);font-weight:600;">PBR
-            Materials</span>
-          <span class="project-tag"
-            style="background:var(--parchment);color:var(--clay);font-size:.8rem;padding:.3rem .8rem;border-radius:var(--radius-pill);font-weight:600;">Topology
-            Modelling</span>
+        <div style="display:flex;gap:0.6rem;flex-wrap:wrap;">
+          <span class="project-tag">Blender</span>
+          <span class="project-tag">Cycles Render</span>
+          <span class="project-tag">PBR Materials</span>
+          <span class="project-tag">Topology Modelling</span>
         </div>
         <div class="modal-gallery" role="list" aria-label="Blender project gallery">
           <img src="projets/blender/gir-al-1.webp" alt="Tank render" class="active"
@@ -591,8 +625,8 @@
             onclick="switchModalImg('modal-blender-main-img', this.src, this)" />
         </div>
         <!-- Satellite video -->
-        <div style="margin-top:1.2rem;border-radius:var(--radius);overflow:hidden;">
-          <video controls preload="none" style="width:100%;border-radius:var(--radius);"
+        <div style="margin-top:1.2rem;border-radius:var(--radius-sm);overflow:hidden;">
+          <video controls preload="none" style="width:100%;border-radius:var(--radius-sm);"
             poster="projets/blender/Capture d'écran 2025-09-10 101125.png">
             <source src="projets/blender/satelite.mp4" type="video/mp4" />
           </video>
@@ -620,18 +654,11 @@
           This creates the illusion of interacting through a clear glass window. The project encompasses extensive
           research into PDLC voltage driving, touch/object recognition, and a custom CAD-designed enclosure.
         </p>
-        <div style="display:flex;gap:.6rem;flex-wrap:wrap;">
-          <span class="project-tag"
-            style="background:var(--parchment);color:var(--clay);font-size:.8rem;padding:.3rem .8rem;border-radius:var(--radius-pill);font-weight:600;">3D
-            Concept Design</span>
-          <span class="project-tag"
-            style="background:var(--parchment);color:var(--clay);font-size:.8rem;padding:.3rem .8rem;border-radius:var(--radius-pill);font-weight:600;">Blender</span>
-          <span class="project-tag"
-            style="background:var(--parchment);color:var(--clay);font-size:.8rem;padding:.3rem .8rem;border-radius:var(--radius-pill);font-weight:600;">Industrial
-            Design</span>
-          <span class="project-tag"
-            style="background:var(--parchment);color:var(--clay);font-size:.8rem;padding:.3rem .8rem;border-radius:var(--radius-pill);font-weight:600;">HCI
-            Concept</span>
+        <div style="display:flex;gap:0.6rem;flex-wrap:wrap;">
+          <span class="project-tag">3D Concept Design</span>
+          <span class="project-tag">Blender</span>
+          <span class="project-tag">Industrial Design</span>
+          <span class="project-tag">HCI Concept</span>
         </div>
         <div class="modal-gallery" role="list" aria-label="Crystalboard project gallery">
           <img src="projets/crystalboard/visu1.png" alt="Crystalboard 3D visualisation" class="active"
@@ -654,19 +681,12 @@
         <h2 class="modal-title">AI-CG Web Apps</h2>
         <p class="modal-desc" style="margin-bottom:1.2rem;">
           Three browser-native applications exploring Computer Graphics and Artificial Intelligence — running live,
-          right
-          here.
+          right here.
         </p>
-        <div style="display:flex;gap:.6rem;flex-wrap:wrap;margin-bottom:1.4rem;">
-          <span class="project-tag"
-            style="background:var(--parchment);color:var(--clay);font-size:.8rem;padding:.3rem .8rem;border-radius:var(--radius-pill);font-weight:600;">Artificial
-            Intelligence</span>
-          <span class="project-tag"
-            style="background:var(--parchment);color:var(--clay);font-size:.8rem;padding:.3rem .8rem;border-radius:var(--radius-pill);font-weight:600;">Computer
-            Graphics</span>
-          <span class="project-tag"
-            style="background:var(--parchment);color:var(--clay);font-size:.8rem;padding:.3rem .8rem;border-radius:var(--radius-pill);font-weight:600;">LLM
-            Integration</span>
+        <div style="display:flex;gap:0.6rem;flex-wrap:wrap;margin-bottom:1.4rem;">
+          <span class="project-tag">Artificial Intelligence</span>
+          <span class="project-tag">Computer Graphics</span>
+          <span class="project-tag">LLM Integration</span>
         </div>
 
         <!-- Tab bar -->
@@ -755,11 +775,94 @@
        JAVASCRIPT
   ════════════════════════════════════════ -->
   <script>
+    /* ── Scroll progress indicator (Topology style) ── */
+    const progressBar = document.getElementById('scroll-progress');
+    window.addEventListener('scroll', () => {
+      const h = document.documentElement.scrollHeight - window.innerHeight;
+      if (h > 0) {
+        const pct = (window.scrollY / h) * 100;
+        progressBar.style.width = pct + '%';
+      }
+    }, { passive: true });
+
     /* ── Navbar scroll effect ── */
     const navbar = document.getElementById('navbar');
     window.addEventListener('scroll', () => {
       navbar.classList.toggle('scrolled', window.scrollY > 40);
     }, { passive: true });
+
+    /* ── Parallax on hero background (Scroll + Mouse) ── */
+    const heroBg = document.getElementById('hero-bg-parallax');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY < window.innerHeight) {
+        const offset = window.scrollY * 0.22;
+        heroBg.style.transform = `translateY(${offset}px)`;
+      }
+    }, { passive: true });
+
+    /* ── Topology Interactive Card Spotlight Sheen ── */
+    const cards = document.querySelectorAll('.project-card');
+    cards.forEach(card => {
+      card.addEventListener('mousemove', (e) => {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        card.style.setProperty('--mouse-x', `${x}px`);
+        card.style.setProperty('--mouse-y', `${y}px`);
+      });
+    });
+
+    /* ── Ragged Edge 1-Click Copy with Feedback ── */
+    const copyBtns = document.querySelectorAll('.ragged-copy-btn[data-copy]');
+    copyBtns.forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        const textToCopy = btn.getAttribute('data-copy');
+        if (!textToCopy) return;
+
+        navigator.clipboard.writeText(textToCopy).then(() => {
+          const originalHTML = btn.innerHTML;
+          btn.classList.add('copied');
+          btn.innerHTML = `
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="20 6 9 17 4 12"/>
+            </svg>
+            <span>Copied ✓</span>
+          `;
+          setTimeout(() => {
+            btn.innerHTML = originalHTML;
+            btn.classList.remove('copied');
+          }, 2000);
+        }).catch(err => {
+          console.warn('Clipboard write failed:', err);
+        });
+      });
+    });
+
+    /* ── Live Paris Clock in Footer (European Time) ── */
+    function updateParisClock() {
+      const clockEl = document.getElementById('paris-clock');
+      if (!clockEl) return;
+      const now = new Date();
+      const timeStr = new Intl.DateTimeFormat('en-GB', {
+        timeZone: 'Europe/Paris',
+        hour: '2-digit',
+        minute: '2-digit',
+        second: '2-digit',
+        hour12: false
+      }).format(now);
+      clockEl.textContent = `Paris, FR · ${timeStr} CET`;
+    }
+    updateParisClock();
+    setInterval(updateParisClock, 1000);
+
+    /* ── Back to Top ── */
+    const bttBtn = document.getElementById('back-to-top');
+    if (bttBtn) {
+      bttBtn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
 
     /* ── Hamburger menu ── */
     const hamburger = document.getElementById('hamburger');
@@ -775,7 +878,7 @@
       });
     });
 
-    /* ── Intersection Observer ,reveal on scroll ── */
+    /* ── Intersection Observer: reveal on scroll (Expo-Out Easing) ── */
     const revealEls = document.querySelectorAll('.reveal');
     const revealObs = new IntersectionObserver((entries) => {
       entries.forEach(e => {
@@ -799,21 +902,6 @@
     }, { threshold: 0.15 });
     eduItems.forEach(el => eduObs.observe(el));
 
-    /* ── Skill bar animation ── */
-    const skillFills = document.querySelectorAll('.skill-fill');
-    const skillObs = new IntersectionObserver((entries) => {
-      entries.forEach(e => {
-        if (e.isIntersecting) {
-          const el = e.target;
-          const w = el.getAttribute('data-width') || '70%';
-          el.style.width = w;
-          el.classList.add('animated');
-          skillObs.unobserve(el);
-        }
-      });
-    }, { threshold: 0.4 });
-    skillFills.forEach(el => { el.style.width = '0'; skillObs.observe(el); });
-
     /* ── Project modal logic ── */
     const projects = ['guardian', 'petal', 'blender', 'crystalboard', 'aicg'];
 
@@ -824,6 +912,7 @@
       document.body.style.overflow = 'hidden';
       overlay.querySelector('.modal-close')?.focus();
     }
+
     function closeModal(id) {
       const overlay = document.getElementById('modal-' + id);
       if (!overlay) return;
@@ -922,13 +1011,13 @@
       e.preventDefault();
       const name = document.getElementById('form-name').value;
       const email = document.getElementById('form-email').value;
-      const subject = document.getElementById('form-subject').value || 'Portfolio Contact';
+      const subject = document.getElementById('form-subject').value || 'Portfolio Inquiry';
       const message = document.getElementById('form-message').value;
       const mailto = `mailto:alexis.giraud74@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${message}`)}`;
       window.location.href = mailto;
       const fb = document.getElementById('form-feedback');
       fb.style.display = 'block';
-      fb.textContent = '✓ Opening your email client...';
+      fb.textContent = '✓ Opening your email client to send message...';
     }
 
     /* ── Smooth active nav link highlighting ── */
