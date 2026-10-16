@@ -24,16 +24,16 @@
   --border-dark: rgba(255, 255, 255, 0.12);
 
   /* Typography Colors */
-  --ink: #141210;
-  --ink-secondary: #544E47;
-  --ink-muted: #8A8279;
-  --ink-faint: #B5AEA4;
+  --ink: #0C120C;
+  --ink-secondary: #6D7275;
+  --ink-muted: #7EA09D;
+  --ink-faint: #ECEBF3;
   --white: #FFFFFF;
   --off-white: #FAF9F6;
 
   /* Signature Terracotta Accent */
-  --accent: #D25424;
-  --accent-light: #E26938;
+  --accent: #FF5900;
+  --accent-light: #FF8847;
   --accent-faint: rgba(210, 84, 36, 0.08);
   --accent-glow: rgba(210, 84, 36, 0.25);
   
