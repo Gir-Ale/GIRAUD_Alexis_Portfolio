@@ -1467,12 +1467,12 @@ footer {
   overflow-y: auto;
   box-shadow: var(--shadow-xl);
   border: 1px solid var(--border-medium);
-  transform: translateY(24px) scale(0.97);
+  transform: translateY(24px) scale(0.85);
   transition: transform var(--duration-normal) var(--ease-out);
 }
 
 .modal-overlay.open .modal {
-  transform: translateY(0) scale(1);
+  transform: translateY(0) scale(0.9);
 }
 
 .modal-media {
