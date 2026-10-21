@@ -32,11 +32,11 @@
   ════════════════════════════════════════ -->
   <nav id="navbar" role="navigation" aria-label="Main navigation">
     <div class="nav-brand-group">
-      <a class="nav-logo" href="#hero">Alexis <span>Giraud</span></a>
+      <a class="nav-logo" href="#intro">Alexis <span>Giraud</span></a>
     </div>
 
     <ul class="nav-links" id="nav-links">
-      <li><a href="#about">About</a></li>
+      <li><a href="#intro">About</a></li>
       <li><a href="#projects">Projects</a></li>
       <li><a href="#experiences">Experiences</a></li>
       <li><a href="#contact" class="nav-cta">Contact</a></li>
@@ -48,88 +48,64 @@
   </nav>
 
   <!-- ═══════════════════════════════════════
-       HERO (Minimalist & Dynamic)
+       INTRO & OVERVIEW
   ════════════════════════════════════════ -->
-  <section id="hero" aria-label="Introduction">
+  <section id="intro" aria-label="Introduction and Overview">
     <div class="hero-bg" id="hero-bg-parallax"></div>
     <div class="hero-ambient-glow" aria-hidden="true"></div>
     <div class="hero-bg-gif" aria-hidden="true"></div>
     <div class="hero-noise" aria-hidden="true"></div>
 
-    <div class="hero-content">
-      <div class="hero-badge-wrap">
-        <div class="hero-badge">
-          <span class="hero-badge-dot" aria-hidden="true"></span>
-          Engineering Student · Creative Technologist
-        </div>
-      </div>
-
-      <h1 class="hero-title">
-        Alexis <em>Giraud</em>
-      </h1>
-
-      <p class="hero-sub">
-        Designing, building & testing, from modular physical products to autonomous
-        ESP32 surveillance robotics. Bringing ideas from first sketch to working reality.
-      </p>
-
-      <div class="hero-actions">
-        <a href="#projects" class="btn btn-primary" id="hero-projects-btn">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-            stroke-linecap="round" stroke-linejoin="round">
-            <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
-            <polyline points="9 22 9 12 15 12 15 22" />
-          </svg>
-          View Selected Projects
-        </a>
-        <a href="projets/Alexis_Giraud_CV_Stage_Ingenieur_2027.pdf" download class="btn btn-outline" id="hero-cv-btn">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-            stroke-linecap="round" stroke-linejoin="round">
-            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
-            <polyline points="7 10 12 15 17 10" />
-            <line x1="12" y1="15" x2="12" y2="3" />
-          </svg>
-          Download CV
-        </a>
-      </div>
-    </div>
-
-    <div class="hero-scroll" aria-hidden="true">
-      <div class="hero-scroll-line"></div>
-      Scroll
-    </div>
-  </section>
-
-  <!-- ═══════════════════════════════════════
-       ABOUT
-  ════════════════════════════════════════ -->
-  <section id="about" aria-label="About me">
-    <div class="about-inner">
-
-      <div class="about-visual reveal">
-        <div class="about-gif-wrap">
-          <img src="projets/guardian/IMG_20260314_211314824.jpg" alt="FPV octopedal robot physical prototype"
-            loading="lazy" />
-        </div>
-        <div class="about-accent-card">
-          <span class="about-accent-icon" aria-hidden="true">⚙</span>
-          <div>
-            <span class="about-accent-label">Hardware & Software Integration</span>
-            <span class="about-accent-sub">CAD · Robotics · Embedded Systems</span>
+    <div class="intro-container" id="about">
+      <!-- Hero Top Presentation -->
+      <div class="hero-content">
+        <div class="hero-badge-wrap">
+          <div class="hero-badge">
+            <span class="hero-badge-dot" aria-hidden="true"></span>
+            Engineering Student · Creative Technologist
           </div>
         </div>
-      </div>
 
-      <div class="about-text">
+        <h1 class="hero-title">
+          Alexis <em>Giraud</em>
+        </h1>
+
         <p class="section-label">[ 01 // OVERVIEW ]</p>
-        <h2 class="section-title">Building Projects<br /><em>From Concept to Prototype</em></h2>
-        <p class="section-desc reveal reveal-delay-1">
-          I am an engineering student at ESILV passionate about bringing projects from sketched ideas to fully working
-          prototypes.
-          I started 3D modeling in 2021, first as a hobby designing objects, scenes, and animations. With time, I
-          developed rigorous skills in CAD, 3D printing, electronics, embedded programming, and robotics.
 
-        <div class="about-tags reveal reveal-delay-3" style="margin-top:1.8rem">
+        <div class="intro-narrative">
+          <p class="intro-lead">
+            From concept to reality: engineering, prototyping, and autonomous robotics.
+          </p>
+          <p class="intro-bio">
+            I’m an engineering student at ESILV passionate about transforming ideas into functional systems. Since 2021,
+            I’ve evolved from 3D modeling and animation into multidisciplinary engineering, building hands-on experience
+            in CAD design, rapid FDM prototyping, custom electronics, and embedded C/C++ programming. My projects range
+            from modular physical products to autonomous ESP32-based surveillance robots, combining design, fabrication,
+            and testing to bring concepts to life.
+          </p>
+        </div>
+
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-primary" id="hero-projects-btn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+              <polyline points="9 22 9 12 15 12 15 22" />
+            </svg>
+            View Selected Projects
+          </a>
+          <a href="projets/Alexis_Giraud_CV_Stage_Ingenieur_2027.pdf" download class="btn btn-outline" id="hero-cv-btn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+              <polyline points="7 10 12 15 17 10" />
+              <line x1="12" y1="15" x2="12" y2="3" />
+            </svg>
+            Download CV
+          </a>
+        </div>
+
+        <div class="about-tags reveal reveal-delay-2">
           <span class="about-tag">CAD / SolidWorks / Fusion 360</span>
           <span class="about-tag">FDM 3D Printing</span>
           <span class="about-tag">Blender / Cycles Rendering</span>
@@ -150,7 +126,7 @@
     <div class="projects-inner">
       <div class="section-header">
         <p class="section-label">[ 02 // SELECTED WORKS ]</p>
-        <h2 class="section-title">Featured Projects</h2>
+        <h2 class="section-title">Building Projects<br /><em>From Concept to Prototype</em></h2>
       </div>
 
       <div class="projects-grid">
