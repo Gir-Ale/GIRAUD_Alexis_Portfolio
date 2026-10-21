@@ -459,19 +459,10 @@
 
   <!-- Guardian Modal -->
   <div class="modal-overlay" id="modal-guardian" role="dialog" aria-modal="true" aria-label="Guardian project details">
+    <button class="modal-close" id="modal-guardian-close" aria-label="Close Guardian modal">✕</button>
     <div class="modal">
       <div class="modal-media">
         <img src="projets/guardian/1M2.png" alt="Guardian surveillance robot dashboard" id="modal-guardian-main-img" />
-        <button class="modal-close" id="modal-guardian-close" aria-label="Close Guardian modal">✕</button>
-      </div>
-      <div class="modal-body">
-        <h2 class="modal-title">Guardian</h2>
-        <p class="modal-desc">
-          Guardian is an <strong>octopod surveillance robot</strong> built around the <strong>Theo Jansen mechanism</strong>, designed for stable locomotion over uneven terrain where wheels fall short.
-          Powered by an <strong>ESP32</strong> and a <strong>2S Li-Ion battery pack</strong>, the system streams <strong>live FPV video</strong> to a custom <strong>browser-based dashboard</strong>.
-          It features real-time <strong>pan/tilt servo control</strong> for the ESP-CAM, dynamic motor speed control, and an integrated audio speaker.
-          The entire mechanism was <strong>CAD-modelled</strong>, iteratively refined, and <strong>3D-printed</strong>, using an octopod configuration to ensure constant ground contact and mechanical synchronization.
-        </p>
         <div class="modal-gallery" role="list" aria-label="Guardian project gallery">
           <img src="projets/guardian/1.png" alt="Guardian hardware photo 1"
             onclick="switchModalImg('modal-guardian-main-img', this.src, this)" />
@@ -481,11 +472,20 @@
             onclick="switchModalImg('modal-guardian-main-img', this.src, this)" />
           <img src="projets/guardian/IMG_20260314_211314824.jpg" alt="Guardian build process"
             onclick="switchModalImg('modal-guardian-main-img', this.src, this)" />
-          <img src="projets/guardian/gir-al-capture-decran-2026-03-26-133208.webp" alt="Dashboard view" class="active"
+          <img src="projets/guardian/gir-al-capture-decran-2026-03-26-133208.webp" alt="Dashboard view"
             onclick="switchModalImg('modal-guardian-main-img', this.src, this)" />
         </div>
+      </div>
+      <div class="modal-body">
+        <h2 class="modal-title">Guardian</h2>
+        <p class="modal-desc">
+          Guardian is an <strong>octopod surveillance robot</strong> built around the <strong>Theo Jansen mechanism</strong>, designed for stable locomotion over uneven terrain where wheels fall short.
+          Powered by an <strong>ESP32</strong> and a <strong>2S Li-Ion battery pack</strong>, the system streams <strong>live FPV video</strong> to a custom <strong>browser-based dashboard</strong>.
+          It features real-time <strong>pan/tilt servo control</strong> for the ESP-CAM, dynamic motor speed control, and an integrated audio speaker.
+          The entire mechanism was <strong>CAD-modelled</strong>, iteratively refined, and <strong>3D-printed</strong>, using an octopod configuration to ensure constant ground contact and mechanical synchronization.
+        </p>
         <div style="margin-top:1.2rem;border-radius:var(--radius-sm);overflow:hidden;">
-          <video controls preload="none" style="width:100%;border-radius:var(--radius-sm);"
+          <video controls preload="none" muted playsinline style="width:100%;border-radius:var(--radius-sm);"
             poster="projets/guardian/IMG_20260326_190028294.jpg">
             <source src="projets/guardian/VID_20260312_122059891.mp4" type="video/mp4" />
           </video>
@@ -503,18 +503,10 @@
 
   <!-- Petal Modal -->
   <div class="modal-overlay" id="modal-petal" role="dialog" aria-modal="true" aria-label="Petal lamp project details">
+    <button class="modal-close" id="modal-petal-close" aria-label="Close Petal modal">✕</button>
     <div class="modal">
       <div class="modal-media">
         <img src="projets/Petal/thumbnail2.png" alt="Petal lamp Blender render" id="modal-petal-main-img" />
-        <button class="modal-close" id="modal-petal-close" aria-label="Close Petal modal">✕</button>
-      </div>
-      <div class="modal-body">
-        <h2 class="modal-title">Petal Lamp</h2>
-        <p class="modal-desc">
-          Pétale is a <strong>modular acrylic lampshade</strong> designed to adapt to any desired ambiance (measuring 17x15x15 cm).
-          The concept was developed in <strong>Blender</strong> with careful attention to light diffusion and petal geometry, then physically prototyped using <strong>laser cutting</strong> for precise acrylic manufacturing.
-          The project was launched on <strong>Kickstarter</strong> (March–April 2026) and successfully raised <strong>337% of its initial goal</strong>, reaching €596 with 16 backers. The animated demonstration showcases how the blades create a warm, directional atmosphere.
-        </p>
         <div class="modal-gallery" role="list" aria-label="Petal project gallery">
           <img src="projets/Petal/thumbnail2.png" alt="Petal render" class="active"
             onclick="switchModalImg('modal-petal-main-img', this.src, this)" />
@@ -523,6 +515,14 @@
           <img src="projets/Petal/ezgif.com-optimize.gif" alt="Petal lamp animated"
             onclick="switchModalImg('modal-petal-main-img', this.src, this)" />
         </div>
+      </div>
+      <div class="modal-body">
+        <h2 class="modal-title">Petal Lamp</h2>
+        <p class="modal-desc">
+          Pétale is a <strong>modular acrylic lampshade</strong> designed to adapt to any desired ambiance (measuring 17x15x15 cm).
+          The concept was developed in <strong>Blender</strong> with careful attention to light diffusion and petal geometry, then physically prototyped using <strong>laser cutting</strong> for precise acrylic manufacturing.
+          The project was launched on <strong>Kickstarter</strong> (March–April 2026) and successfully raised <strong>337% of its initial goal</strong>, reaching €596 with 16 backers. The animated demonstration showcases how the blades create a warm, directional atmosphere.
+        </p>
         <div style="display:flex;gap:0.6rem;flex-wrap:wrap;margin-top:1.2rem;">
           <span class="project-tag">Blender</span>
           <span class="project-tag">FDM 3D Printing</span>
@@ -536,16 +536,10 @@
   <!-- Blender Modal -->
   <div class="modal-overlay" id="modal-blender" role="dialog" aria-modal="true"
     aria-label="Blender 3D modelling project details">
+    <button class="modal-close" id="modal-blender-close" aria-label="Close Blender modal">✕</button>
     <div class="modal">
       <div class="modal-media">
         <img src="projets/blender/gir-al-1.webp" alt="Armoured vehicle 3D model" id="modal-blender-main-img" />
-        <button class="modal-close" id="modal-blender-close" aria-label="Close Blender modal">✕</button>
-      </div>
-      <div class="modal-body">
-        <h2 class="modal-title">3D Modelling</h2>
-        <p class="modal-desc">
-          A body of <strong>3D work created in Blender since 2021</strong>, spanning objects, scenes, animations, and art projects. Rendered with <strong>custom photorealistic PBR materials</strong> under <strong>Cycles studio lighting</strong>. All these projects were done independently on personal initiative.
-        </p>
         <div class="modal-gallery" role="list" aria-label="Blender project gallery">
           <img src="projets/blender/gir-al-1.webp" alt="Tank render" class="active"
             onclick="switchModalImg('modal-blender-main-img', this.src, this)" />
@@ -554,9 +548,15 @@
           <img src="projets/blender/g-ral-2.jpg" alt="Blender render 3"
             onclick="switchModalImg('modal-blender-main-img', this.src, this)" />
         </div>
+      </div>
+      <div class="modal-body">
+        <h2 class="modal-title">3D Modelling</h2>
+        <p class="modal-desc">
+          A body of <strong>3D work created in Blender since 2021</strong>, spanning objects, scenes, animations, and art projects. Rendered with <strong>custom photorealistic PBR materials</strong> under <strong>Cycles studio lighting</strong>. All these projects were done independently on personal initiative.
+        </p>
         <!-- Satellite video -->
         <div style="margin-top:1.2rem;border-radius:var(--radius-sm);overflow:hidden;">
-          <video controls preload="none" style="width:100%;border-radius:var(--radius-sm);"
+          <video controls preload="none" muted playsinline style="width:100%;border-radius:var(--radius-sm);"
             poster="projets/blender/Capture d'écran 2025-09-10 101125.png">
             <source src="projets/blender/satelite.mp4" type="video/mp4" />
           </video>
@@ -574,19 +574,11 @@
   <!-- Crystalboard Modal -->
   <div class="modal-overlay" id="modal-crystalboard" role="dialog" aria-modal="true"
     aria-label="Crystalboard project details">
+    <button class="modal-close" id="modal-crystalboard-close" aria-label="Close Crystalboard modal">✕</button>
     <div class="modal">
       <div class="modal-media">
         <img src="projets/crystalboard/visu1.png" alt="Crystalboard workstation concept"
           id="modal-crystalboard-main-img" />
-        <button class="modal-close" id="modal-crystalboard-close" aria-label="Close Crystalboard modal">✕</button>
-      </div>
-      <div class="modal-body">
-        <h2 class="modal-title">Crystalboard (WIP)</h2>
-        <p class="modal-desc">
-          CrystalBoard is a <strong>hardware concept exploring the future of human-computer interaction</strong> by making online video calls more realistic and immersive.
-          To restore lost eye contact and body language, the device uses <strong>smart Liquid Crystal (PDLC) films</strong> to rapidly turn the display transparent, capture a camera frame through the screen, and switch back to opaque.
-          This creates the illusion of interacting through a clear glass window. The project encompasses extensive research into <strong>PDLC voltage driving</strong>, <strong>touch/object recognition</strong>, and a custom <strong>CAD-designed enclosure</strong>.
-        </p>
         <div class="modal-gallery" role="list" aria-label="Crystalboard project gallery">
           <img src="projets/crystalboard/visu1.png" alt="Crystalboard 3D visualisation" class="active"
             onclick="switchModalImg('modal-crystalboard-main-img', this.src, this)" />
@@ -595,6 +587,14 @@
           <img src="projets/crystalboard/IMG_20260305_150654929.jpg" alt="Crystalboard physical view"
             onclick="switchModalImg('modal-crystalboard-main-img', this.src, this)" />
         </div>
+      </div>
+      <div class="modal-body">
+        <h2 class="modal-title">Crystalboard (WIP)</h2>
+        <p class="modal-desc">
+          CrystalBoard is a <strong>hardware concept exploring the future of human-computer interaction</strong> by making online video calls more realistic and immersive.
+          To restore lost eye contact and body language, the device uses <strong>smart Liquid Crystal (PDLC) films</strong> to rapidly turn the display transparent, capture a camera frame through the screen, and switch back to opaque.
+          This creates the illusion of interacting through a clear glass window. The project encompasses extensive research into <strong>PDLC voltage driving</strong>, <strong>touch/object recognition</strong>, and a custom <strong>CAD-designed enclosure</strong>.
+        </p>
         <div style="display:flex;gap:0.6rem;flex-wrap:wrap;margin-top:1.2rem;">
           <span class="project-tag">3D Concept Design</span>
           <span class="project-tag">Blender</span>
@@ -607,8 +607,8 @@
 
   <!-- AI-CG Modal -->
   <div class="modal-overlay" id="modal-aicg" role="dialog" aria-modal="true" aria-label="AI-CG project details">
+    <button class="modal-close modal-close-aicg" id="modal-aicg-close" aria-label="Close AI-CG modal">✕</button>
     <div class="modal modal-aicg-wide">
-      <button class="modal-close modal-close-aicg" id="modal-aicg-close" aria-label="Close AI-CG modal">✕</button>
 
       <div class="modal-body" style="padding-bottom:0;">
         <h2 class="modal-title">Web Apps</h2>
@@ -835,9 +835,16 @@
     function openModal(id) {
       const overlay = document.getElementById('modal-' + id);
       if (!overlay) return;
+      const modal = overlay.querySelector('.modal');
+      if (modal) modal.scrollTop = 0;
       overlay.classList.add('open');
       document.body.style.overflow = 'hidden';
       overlay.querySelector('.modal-close')?.focus();
+      overlay.querySelectorAll('video').forEach(video => {
+        video.play().catch(error => {
+          if (error.name !== 'AbortError') console.warn('Could not autoplay project video:', error);
+        });
+      });
     }
 
     function closeModal(id) {
@@ -845,6 +852,7 @@
       if (!overlay) return;
       overlay.classList.remove('open');
       document.body.style.overflow = '';
+      overlay.querySelectorAll('video').forEach(video => video.pause());
       // Unload AI-CG iframes when modal closes to free resources
       if (id === 'aicg') {
         ['digit', 'raymarch', 'llm'].forEach(key => {
