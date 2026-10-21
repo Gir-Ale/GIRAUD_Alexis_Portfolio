@@ -95,6 +95,11 @@ body {
   letter-spacing: -0.011em;
 }
 
+strong {
+  font-weight: 600;
+  color: var(--ink);
+}
+
 /* Selection */
 ::selection {
   background: var(--accent);
