@@ -1856,6 +1856,31 @@ footer {
 }
 
 /* ---- RESPONSIVE MEDIA QUERIES ---- */
+@media (min-width: 1440px) {
+  .intro-container,
+  .hero-content {
+    max-width: 1400px;
+  }
+
+  .intro-narrative {
+    max-width: 1200px;
+  }
+
+  .projects-inner,
+  .contact-inner,
+  .footer-inner {
+    max-width: 2200px;
+  }
+
+  .edu-inner {
+    max-width: 1400px;
+  }
+
+  .ragged-content-grid {
+    gap: 6rem;
+  }
+}
+
 @media (max-width: 1024px) {
   #navbar {
     padding: 1rem 2rem;
